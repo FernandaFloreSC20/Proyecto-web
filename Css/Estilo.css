@@ -1,0 +1,253 @@
+body {
+    background-image: url(../Img/Fondo.jpg);
+    background-color: #4290e9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* navegación */
+.navegacion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI';
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-grid;
+  padding: 12px 115px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s;
+}
+nav ul li::after {
+  content: '';
+  background: #ffffff;
+  width: 50%;
+  height: 90%;
+  border-radius: 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+}
+
+nav ul li:hover {
+color: #069be0;
+}
+
+nav ul li:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+
+
+
+/* info+imagenes */
+h1 {
+  font-size: 73px;
+  color: white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 290px;
+  border-bottom: 4px solid white;
+  text-shadow: 2px 2px 2px rgb(59, 59, 59);
+}
+
+img {
+  max-width: 100%;  
+  border-radius: 20px;
+  margin-block: 35px;
+  margin: 0;
+  padding: 5px;
+  background: white;
+}
+
+.columnas-imagenes {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .columnas-imagenes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3rem;
+      row-gap: 4rem;
+  }
+}
+
+.entrada-blog h2 {
+  color: #124661;
+  font-size: 26px;
+  text-align: center;
+  font-family: var('Krub', sans-serif) ;
+  margin: 6px;
+  padding: 3px;
+  background: white;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.entrada-blog p {
+  padding-left: 1px;
+  display: block;
+  text-align: justify;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif ;
+  -webkit-text-fill-color: white;
+}
+
+.entrada-blog a {
+  color: #124661;
+  text-align: center;
+  margin: 8px;
+  padding: 5px;
+  background: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif ;
+  cursor: pointer;
+}
+
+
+
+/* contacto */
+h4 {
+  font-size: 30px;  
+  text-align: left; 
+  padding-bottom: 15px; 
+  color: #3d94cf;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuadro_iniciar {
+  background-color: white;
+  border-radius: 20px;
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 400%;
+  left: 35%;
+  -webkit-box-shadow: 2px 7px 26px 0px rgba(0,0,0,0.62);
+-moz-box-shadow: 2px 7px 26px 0px rgba(0,0,0,0.62);
+box-shadow: 2px 7px 26px 0px rgba(0,0,0,0.62);
+}
+
+.cuadro_iniciar .cuadro_usuario {
+  position: relative;
+}
+
+.cuadro_iniciar .cuadro_usuario input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #044766;
+  outline: none;
+  background: transparent;
+}
+
+.cuadro_iniciar .cuadro_usuario label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #044766;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.cuadro_iniciar .cuadro_usuario input:focus ~ label,
+.cuadro_iniciar .cuadro_usuario input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #3d94cf;
+  font-size: 15px;
+}
+
+/* BOTON ENVIAR */
+button {
+  border: 0;
+  border-radius: 100px;
+  background-color: #044766;
+  color: #ffffff;
+  font-weight: Bold;
+  -webkit-transition: all 0.5s;
+  width: 320px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: #3d94cf;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+
+
+.chile_info {
+  padding: 130px;
+  margin: 100px;
+  text-align: center;
+}
+
+.chile_info h3 {
+  color: white;
+  font-size: 28px;
+  margin: 12px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chile_info h6 {
+  color: white;
+  font-size: 14px;
+  margin: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* footer */
+h3 {
+  text-align: center;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif ;
+  
+}
